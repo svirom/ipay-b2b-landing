@@ -1,0 +1,19 @@
+.row {
+  &.row--16 {
+    --bs-gutter-x: 1rem;
+  }
+
+  &.row--20 {
+    --bs-gutter-x: 1.25rem;
+  }
+
+  &.row--40 {
+    --bs-gutter-x: 2.5rem;
+  }
+
+  @include until($lg) {
+    &.row--40 {
+      --bs-gutter-x: 1.875rem;
+    }
+  }
+}

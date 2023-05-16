@@ -1,0 +1,21 @@
+.btn {
+  &.btn-main {
+    height: 3.5rem;
+    padding: 0.8125rem 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 0.5rem;
+    background-color: $color-accent;
+
+    &:hover {
+      background-color: darken($color-accent, 10%);
+    }
+
+    &:active {
+      color: #fff;
+      border-color: transparent;
+      background-color: $color-accent;
+    }
+  }
+}

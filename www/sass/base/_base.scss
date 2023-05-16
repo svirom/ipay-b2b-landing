@@ -1,0 +1,44 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+		--bs-gutter-x: 1.875rem;
+	}
+
+	@media (min-width: 1200px) {
+		.container, .container-sm, .container-md, .container-lg, .container-xl {
+			max-width: 1140px;
+		}
+	}
+	
+	.row {
+		--bs-gutter-x: 1.875rem;
+	}
+}
+
+.main {
+	position: relative;
+	flex: 1 0 auto;
+}
+
+.header, .footer {
+	flex: 0 0 auto;
+}
+
+.section-wrapper {
+	margin-top: 6.25rem;
+}
+
+@include until($lg) {
+	.section-wrapper {
+		margin-top: 4rem;
+	}
+}
+
+@include until($md) {
+	.section-wrapper {
+		margin-top: 1.875rem;
+	}
+}

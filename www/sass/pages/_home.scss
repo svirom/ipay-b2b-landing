@@ -1,0 +1,359 @@
+// diamond figures
+.diamond {
+  position: absolute;
+  border: 2px dashed #212530;
+  transform: rotate(45deg);
+
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    border: 2px dashed #212530;
+  }
+
+  &--1 {
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 264px;
+    height: 264px;
+    border-radius: 55px;
+
+    &::before {
+      top: -54px;
+      // left: calc(50% - 52px);
+      left: -54px;
+      width: 368px;
+      height: 368px;
+      border-radius: 68px;
+    }
+
+    &::after {
+      top: -106px;
+      // left: calc(50% - 102px);
+      left: -106px;
+      width: 468px;
+      height: 468px;
+      border-radius: 66px;
+    }
+  }
+
+  &--2 {}
+}
+
+// .hero
+.home-hero {
+	position: relative;
+	padding-top: 9.6875rem;
+	padding-top: 10.75rem;
+	background: linear-gradient(to top, #fff, #fff 92px, #13202D 92px, #13202D 100%);
+	overflow: hidden;
+
+	.home-hero__title {
+		color: #fff;
+	}
+
+	.home-hero__subtitle {
+		color: #fff;
+		font-size: 1.5rem;
+		line-height: 1.20833;
+	}
+}
+
+.hero-cards {
+	margin-top: 3.375rem;
+}
+
+.hero-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 532px;
+	border-radius: 0.25rem;
+
+	&__content {
+		padding: 2rem 2rem 0;
+
+		p {
+			margin-bottom: 1rem;
+			font-size: 1rem;
+		}
+
+		a {
+			color: #E84F35;
+		}
+	}
+
+	&--ewa {
+		background-color: #DFEEFF;
+	}
+
+	&--acquiring {
+		background-color: #E3E3E5;
+	}
+
+	&--payment {
+		background-color: #FAE4AB;
+
+		img {
+			align-self: flex-end;
+		}
+	}
+}
+
+// payment methods
+.payment-methods {
+	padding: 2.5rem;
+	border-radius: 0.25rem;
+	background-color: #F4F7FB;
+
+	h2 {
+		margin-bottom: 0.9375rem;
+	}
+}
+
+.method-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 6rem;
+	margin-top: 2.5rem;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	background-color: #fff;
+
+	img {
+		max-width: 100%;
+	}
+}
+
+// method cards slider
+.method-cards__slider {
+	margin-top: 1.25rem;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.method-card-wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+// home promo
+.home-promo {
+  h2 {
+    margin-bottom: 0.625rem;
+  }
+}
+
+// home certified
+.home-certified {
+  padding: 1.5rem;
+  border: 1px solid #F4F7FB;
+  border-radius: 0.25rem;
+  background-color: #E4F3E3;
+
+  &__content {
+    max-width: 507px;
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// promo awards
+.promo-award__slider {
+	margin-top: 1.25rem;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.award-card-wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.award-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 398px;
+  border-radius: 0.25rem;
+  background-color: #F4F7FB;
+
+  &__img {
+		margin-left: auto;
+		margin-right: auto;
+    padding-top: 2.375rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+  }
+
+  &__content {
+    min-height: 96px;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		padding-bottom: 1.5rem;
+    font-size: 1.25rem;
+    color: #000;
+		text-align: center;
+  }
+}
+
+.slider-dots {
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+
+	li {
+		& + li {
+			margin-left: 0.625rem;
+		}
+
+		button {
+			display: block;
+			width: 0.625rem;
+			height: 0.625rem;
+			padding: 0;
+			font-size: 0;
+			border: 0;
+			border-radius: 50%;
+			background-color: #E3EDFC;
+		}
+
+		&.slick-active {
+			button {
+				background-color: $color-accent;
+			}
+		}
+	}
+}
+
+@include until($xl) {
+	.hero-card {
+		height: 548px;
+	}
+}
+
+@include until($lg) {
+	.home-hero {
+		background: linear-gradient(to top, #fff, #fff 346px, #13202D 346px, #13202D 100%);
+	}
+
+	.hero-cards {
+		margin-top: 2.5rem;
+	}
+
+	.hero-card {
+		flex-direction: row;
+		height: 122px;
+
+		&__content {
+			padding: 1rem;
+
+			h3 {
+				margin-bottom: 0.5rem;
+			}
+
+			p {
+				display: none;
+			}
+		}
+
+		&--ewa, &--acquiring {
+			img {
+				align-self: flex-end;
+			}
+		}
+
+		&--ewa {
+			img {
+				margin-right: 0.6875rem;
+			}
+		}
+
+		&--payment {
+			img {
+				align-self: initial;
+			}
+		}
+	}
+
+	.method-card {
+		margin-top: 1.875rem;
+	}
+}
+
+@include until($md) {
+	.home-hero {
+		padding-top: 7.6875rem;
+
+		.home-hero__subtitle {
+			display: none;
+		}
+	}
+
+	.hero-cards {
+		margin-top: 1.9375rem;
+	}
+
+	.hero-card {
+		&__content {
+			a {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.payment-methods {
+		padding: 1.5rem;
+	}
+
+	.method-card {
+		margin-top: 0;
+	}
+
+	.home-certified {
+		&__img {
+			width: 85px;
+			margin-bottom: 1rem;
+		}
+
+		&__content {
+			p {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.award-card {
+		height: 378px;
+		height: auto;
+
+		&__img {
+			padding-top: 0;
+			padding-bottom: 1.5rem;
+		}
+
+		&__content {
+			min-height: auto;
+			padding-top: 0.625rem;
+			padding-bottom: 0.625rem;
+			font-size: 1.125rem;
+			background-color: #fff;
+		}
+	}
+}
+
+@include until($sm) {
+	.method-cards__slider {
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+
+	.method-card-wrapper {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}

@@ -1,0 +1,100 @@
+// page hero
+.page-hero-wrapper {
+  padding-top: 7.8125rem;
+}
+
+.page-hero {
+  padding: 2.5rem;
+  border-radius: 0.25rem;
+
+  &__content {
+    .page-hero__back-link {
+      font-size: 1rem;
+
+      span {
+        vertical-align: middle;
+      }
+    }
+
+    h1 {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      font-size: 2.5rem;
+    }
+
+    .page-hero__subtitle {
+      margin-bottom: 0.9375rem;
+      font-size: 1.5rem;
+      line-height: 1.21;
+    }
+
+    .btn-main {
+      width: 266px;
+      margin-top: 2.5rem;
+    }
+  }
+
+  &--acquiring {
+    background-color: #F0F5FA;
+  }
+
+  &--tollpayments {
+    background-color: #FAE4AB;
+  }
+}
+
+// page info
+.page-info {
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  background-color: #F0F5FA;
+
+  &__content {
+    p {
+      line-height: 1.21;
+    }
+  }
+}
+
+@include until($lg) {
+  .page-hero-wrapper {
+    padding-top: 8.875rem;
+  }
+}
+
+@include until($md) {
+  .page-hero-wrapper {
+    padding-top: 5.375rem;
+  }
+
+  .page-hero {
+    padding: 0.9375rem;
+
+    &__content {
+      h1 {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        font-size: 1.5rem;
+      }
+
+      .page-hero__subtitle {
+        font-size: 1rem;
+      }
+
+      .btn-main {
+        width: 100%;
+        margin-top: 1.25rem;
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+
+  .page-info {
+    padding: 1rem;
+
+    &__img {
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+  }
+}

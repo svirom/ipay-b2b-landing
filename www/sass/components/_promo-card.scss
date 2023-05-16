@@ -1,0 +1,25 @@
+.promo-card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.875rem;
+
+  &__img {
+    flex: 0 0 auto;
+    margin-bottom: 0.9375rem;
+  }
+
+  &__content {
+    h3 {
+      margin-bottom: 0.9375rem;
+    }
+  }
+
+  @include until($lg) {
+    flex-direction: row;
+
+    &__img {
+      flex-basis: 4.0625rem;
+      padding-right: 0.9375rem;
+    }
+  }
+}
