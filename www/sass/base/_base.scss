@@ -40,5 +40,9 @@
 @include until($md) {
 	.section-wrapper {
 		margin-top: 1.875rem;
+
+		&.section-page {
+			margin-top: 2.5rem;
+		}
 	}
 }
