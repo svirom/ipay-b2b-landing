@@ -1,45 +1,3 @@
-// diamond figures
-.diamond {
-  position: absolute;
-  border: 2px dashed #212530;
-  transform: rotate(45deg);
-
-  &::before, &::after {
-    position: absolute;
-    content: '';
-    border: 2px dashed #212530;
-  }
-
-  &--1 {
-    top: -100px;
-    left: 50%;
-    transform: translateX(-50%) rotate(45deg);
-    width: 264px;
-    height: 264px;
-    border-radius: 55px;
-
-    &::before {
-      top: -54px;
-      // left: calc(50% - 52px);
-      left: -54px;
-      width: 368px;
-      height: 368px;
-      border-radius: 68px;
-    }
-
-    &::after {
-      top: -106px;
-      // left: calc(50% - 102px);
-      left: -106px;
-      width: 468px;
-      height: 468px;
-      border-radius: 66px;
-    }
-  }
-
-  &--2 {}
-}
-
 // .hero
 .home-hero {
 	position: relative;
@@ -47,6 +5,17 @@
 	padding-top: 10.75rem;
 	background: linear-gradient(to top, #fff, #fff 92px, #13202D 92px, #13202D 100%);
 	overflow: hidden;
+
+	&::before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 92px;
+		left: 0;
+		bottom: 0;
+		background-color: #fff;
+		z-index: 1;
+	}
 
 	.home-hero__title {
 		color: #fff;
@@ -60,7 +29,9 @@
 }
 
 .hero-cards {
+	position: relative;
 	margin-top: 3.375rem;
+	z-index: 2;
 }
 
 .hero-card {
@@ -239,6 +210,10 @@
 @include until($lg) {
 	.home-hero {
 		background: linear-gradient(to top, #fff, #fff 346px, #13202D 346px, #13202D 100%);
+
+		&::before {
+			height: 346px;
+		}
 	}
 
 	.hero-cards {

@@ -1,0 +1,147 @@
+// diamond figures
+.diamond {
+  position: absolute;
+  border: 2px dashed #212530;
+  transform: rotate(45deg);
+
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    border: 2px dashed #212530;
+  }
+
+  &--1 {
+    top: -100px;
+    left: calc(50% - 190px);
+    width: 264px;
+    height: 264px;
+    border-radius: 55px;
+
+    &::before {
+      top: -54px;
+      left: -54px;
+      width: 368px;
+      height: 368px;
+      border-radius: 68px;
+    }
+
+    &::after {
+      top: -106px;
+      left: -106px;
+      width: 468px;
+      height: 468px;
+      border-radius: 66px;
+    }
+  }
+
+  &--2 {
+		top: 128px;
+    left: calc(50% + 272px);
+    width: 480px;
+    height: 480px;
+    border-radius: 72px;
+
+		&::before {
+      top: -65px;
+      left: -65px;
+      width: 606px;
+      height: 606px;
+      border-radius: 117px;
+    }
+
+    &::after {
+      top: -124px;
+      left: -124px;
+      width: 722px;
+      height: 722px;
+      border-radius: 117px;
+    }
+	}
+
+  &--3 {
+		top: 120px;
+    left: calc(50% - 620px);
+    transform: translateX(-50%) rotate(45deg);
+    width: 1218px;
+    height: 1218px;
+    border-radius: 117px;
+
+		&::before {
+      top: 54px;
+      left: 54px;
+      width: 1064px;
+      height: 1064px;
+      border-radius: 117px;
+    }
+
+    &::after {
+      top: 114px;
+      left: 114px;
+      width: 985px;
+      height: 985px;
+      border-radius: 93px;
+    }
+	}
+
+  &--4 {
+		top: 306px;
+    left: calc(50% - 622px);
+    transform: translateX(-50%) rotate(45deg);
+    width: 897px;
+    height: 897px;
+    border-radius: 93px;
+
+		&::before {
+      top: 64px;
+      left: 64px;
+      width: 864px;
+      height: 864px;
+      border-color: #1A2631;
+      border-radius: 93px;
+    }
+
+    &::after {
+      top: 148px;
+      left: 147px;
+      width: 864px;
+      height: 864px;
+      border-color: #152536;
+      border-radius: 93px;
+    }
+	}
+
+  &--5 {
+		top: 614px;
+    left: calc(50% - 622px);
+    transform: translateX(-50%) rotate(45deg);
+    width: 864px;
+    height: 864px;
+    border-color: #132334;
+    border-radius: 93px;
+
+		&::before {
+      top: 64px;
+      left: 64px;
+      width: 864px;
+      height: 864px;
+      border-color: #142434;
+      border-radius: 93px;
+    }
+
+    &::after {
+      top: 148px;
+      left: 147px;
+      width: 864px;
+      height: 864px;
+      border-color: #172635;
+      border-radius: 93px;
+    }
+	}
+}
+
+
+@include until($md) {
+  .diamonds {
+    display: none;
+  }
+}
