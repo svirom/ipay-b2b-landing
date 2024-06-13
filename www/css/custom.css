@@ -415,9 +415,6 @@ a:hover {
 .footer-logo > a {
   margin-right: 0.75rem;
 }
-.footer-logo > a img {
-  width: 85px;
-}
 .footer-logo__text {
   display: inline-flex;
   flex-direction: column;
